@@ -5,8 +5,15 @@
     public double Width { get; set; }
     public double Height { get; set; }
 }
-
-public class Player : GameObject { }
+public class Bonus : GameObject
+{
+    public int Type { get; set; } // Тип бонуса (например, 1 - здоровье, 2 - очки)
+    public object Tag { get; set; }
+}
+public class Player : GameObject
+{
+    public double Size { get; set; } = 40; // Начальный размер игрока
+}
 public class Enemy : GameObject
 {
     public double Speed { get; set; } = 2.0;
@@ -14,15 +21,5 @@ public class Enemy : GameObject
 }
 public class Bullet : GameObject 
 {
-    public object Tag { get; set; }
-}
-public class Bonus : GameObject
-{
-    public string Type { get; set; } // Например, "SpeedBoost", "Shield"
-}
-public class Ball : GameObject 
-{ 
-    public double VelocityX { get; set; } 
-    public double VelocityY { get; set; }
     public object Tag { get; set; }
 }

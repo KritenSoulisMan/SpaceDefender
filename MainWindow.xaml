@@ -1,0 +1,16 @@
+﻿<Window x:Class="SpaceDefender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Космический защитник" Height="600" Width="400">
+    <Grid>
+        <Canvas x:Name="GameCanvas" Background="Black">
+            <Rectangle x:Name="PlayerShip" Width="40" Height="20" Fill="Blue"/>
+        </Canvas>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBlock Text="Очки: " Foreground="White"/>
+            <TextBlock x:Name="ScoreText" Text="0" Foreground="White"/>
+        </StackPanel>
+        <MediaElement x:Name="BackgroundMusic" LoadedBehavior="Play" UnloadedBehavior="Stop"
+                      Source="Resources/BackgroundMusic.mp3" Volume="0.5" />
+    </Grid>
+</Window>
